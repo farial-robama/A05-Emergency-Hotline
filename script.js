@@ -32,14 +32,14 @@ function renderHistory() {
     historyList.innerHTML = "";
 
     for (const item of historyData) {
-        const div = createElement("div")
+        const div = document.createElement("div")
         div.innerHTML = `
         <div class="card bg-[#FAFAFA] card-xs shadow-sm flex flex-row gap-5 items-center px-3 py-2 mt-3">
            <div class="card-body flex flex-col">
-                <h2 class="card-title">${data.name}</h2>
-                <p>${data.number}</p>
+                <h2 class="card-title">${item.name}</h2>
+                <p>${item.number}</p>
             </div>
-            <p>${data.time}</p>
+            <p>${item.time}</p>
         </div>`
 
         historyList.appendChild(div)
@@ -49,7 +49,7 @@ function renderHistory() {
 document.querySelectorAll(".heart-btn").forEach((btn) => {
     btn.addEventListener("click",function () {
         hearts++;
-        updateCounters(hearts);
+        updateCounters();
     })
 });
 
@@ -72,33 +72,10 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
     });
 });
 
+document.getElementById("clear-history-btn").addEventListener("click",function(){
+    historyData.length = 0;
+    renderHistory()
+})
 
-// function addHistory(name,number){
-//     const data = {
-//         name : name,
-//         number : number,
-//         time : new Date().toLocaleTimeString
-//     }
-//     historyData.unshift(data);
-//     renderHistory();
-// }
-
-// function renderHistory() {
-//     const historyList = getElement("history-list");
-//     historyList.innerHTML = "";
-
-//     for (const item of historyData) {
-//         const div = createElement("div")
-//         div.innerHTML = `
-//         <div class="card bg-[#FAFAFA] card-xs shadow-sm flex flex-row gap-5 items-center px-3 py-2 mt-3">
-//            <div class="card-body flex flex-col">
-//                 <h2 class="card-title">${data.name}</h2>
-//                 <p>${data.number}</p>
-//             </div>
-//             <p>${data.time}</p>
-//         </div>`
-
-//         historyList.appendChild(div)
-//     }
-// }
+updateCounters();
 
