@@ -21,8 +21,8 @@ function addHistory(name,number){
     const data = {
         name : name,
         number : number,
-        time : new Date().toLocaleTimeString
-    }
+        time : new Date().toLocaleTimeString()
+    };
     historyData.unshift(data);
     renderHistory();
 }
@@ -52,31 +52,53 @@ document.querySelectorAll(".heart-btn").forEach((btn) => {
         updateCounters(hearts);
     })
 });
-function addHistory(name,number){
-    const data = {
-        name : name,
-        number : number,
-        time : new Date().toLocaleTimeString
+
+document.querySelectorAll(".call-btn").forEach((btn) => {
+    btn.addEventListener("click",function () {
+        const card = btn.closest(".card");
+        const name = card.dataset.serviceName;
+        const number = card.dataset.serviceNumber;
+
+        if (coins < 20) {
+        alert("Not enough coins!");
+        return
     }
-    historyData.unshift(data);
-    renderHistory();
-}
 
-function renderHistory() {
-    const historyList = getElement("history-list");
-    historyList.innerHTML = "";
+    coins -= 20;
+    updateCounters();
+    alert(`Calling ${name} (${number})`);
+    addHistory(name, number);
 
-    for (const item of historyData) {
-        const div = createElement("div")
-        div.innerHTML = `
-        <div class="card bg-[#FAFAFA] card-xs shadow-sm flex flex-row gap-5 items-center px-3 py-2 mt-3">
-           <div class="card-body flex flex-col">
-                <h2 class="card-title">${data.name}</h2>
-                <p>${data.number}</p>
-            </div>
-            <p>${data.time}</p>
-        </div>`
+    });
+});
 
-        historyList.appendChild(div)
-    }
-}
+
+// function addHistory(name,number){
+//     const data = {
+//         name : name,
+//         number : number,
+//         time : new Date().toLocaleTimeString
+//     }
+//     historyData.unshift(data);
+//     renderHistory();
+// }
+
+// function renderHistory() {
+//     const historyList = getElement("history-list");
+//     historyList.innerHTML = "";
+
+//     for (const item of historyData) {
+//         const div = createElement("div")
+//         div.innerHTML = `
+//         <div class="card bg-[#FAFAFA] card-xs shadow-sm flex flex-row gap-5 items-center px-3 py-2 mt-3">
+//            <div class="card-body flex flex-col">
+//                 <h2 class="card-title">${data.name}</h2>
+//                 <p>${data.number}</p>
+//             </div>
+//             <p>${data.time}</p>
+//         </div>`
+
+//         historyList.appendChild(div)
+//     }
+// }
+
