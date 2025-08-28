@@ -44,3 +44,10 @@ function renderHistory() {
         historyList.appendChild(div)
     }
 }
+
+document.querySelectorAll(".heart-btn").forEach((btn) => {
+    btn.addEventListener("click",function () {
+        hearts++;
+        updateCounters(hearts);
+    })
+});
