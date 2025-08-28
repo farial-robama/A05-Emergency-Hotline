@@ -2,6 +2,7 @@
 
 let hearts = 0;
 let coins = 100;
+let copyCount = 0;
 historyData = [];
 
 function getElement(id) {
@@ -15,6 +16,7 @@ function setText(id,value) {
 function updateCounters() {
     setText("heart-count",hearts);
     setText("coin-count",coins);
+    setText("copy-count",copyCount);
 }
 
 function addHistory(name,number){
@@ -57,7 +59,7 @@ document.querySelectorAll(".heart-btn").forEach((btn) => {
 // call-btn
 document.querySelectorAll(".heart-btn").forEach((btn) => {
     btn.addEventListener("click",function() {
-        const card = btn.closest(".card");
+        const card = btn.parentElement.parentElement.parentElement;
         const name = card.dataset.serviceName;
         const number = card.dataset.serviceNumber;
         
@@ -79,5 +81,22 @@ document.getElementById("clear-history-btn").addEventListener("click",function()
     renderHistory()
 })
 updateCounters();
+
+// copy-btn
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+        const card = btn.parentElement.parentElement.parentElement;
+        const number = card.dataset.serviceNumber;
+
+        navigator.clipboard.writeText(number).then(() => {
+            alert(`Copied hotline number: ${number}`);
+            copyCount++;
+            updateCounters();
+        }).catch((err) => {
+            console.error("Failed to copy: ", err);
+            
+        });
+    })
+});
 
 
