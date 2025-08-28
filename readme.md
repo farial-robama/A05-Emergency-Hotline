@@ -3,10 +3,10 @@
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
    
-    Answer: getElementById("id")- selects only one element with a specific id.
-            getElementsByClassName- ("class")- selects all elements with a given class.
-            querySelector("selector") - selects the first element that matches a CSS selector (id, class, tag, attribute etc). More flexible than getElementById
-            querySelectorAll("selector") - selects all elements matching a CSS selector.
+    Answer: 1.getElementById("id")- selects only one element with a specific id.
+            2.getElementsByClassName- ("class")- selects all elements with a given class.
+            3.querySelector("selector") - selects the first element that matches a CSS selector (id, class, tag, attribute etc). More flexible than getElementById
+            4.querySelectorAll("selector") - selects all elements matching a CSS selector.
 2. How do you **create and insert a new element into the DOM**?
    
     Answer: 1. Make a new element: document.createElement("div")
