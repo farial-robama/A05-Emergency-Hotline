@@ -24,11 +24,11 @@
   <div class="navbar-end">
     <ul class="menu menu-horizontal px-1">
       <li><a class="btn bg-[#41ff6b1a] text-black rounded-full mr-3 px-5 border-none">
-        <span>0</span>
+        <span id="heart-count">0</span>
         <img class="w-5 h-5" src="./assets/heart.png" alt="">
       </a></li>
       <li><a class="btn bg-[#41ff6b1a] text-black rounded-full mr-3 px-5 border-none">
-        <span>100</span>
+        <span id="coin-count">100</span>
         <img class="w-5 h-5" src="./assets/coin.png" alt="">
       </a></li>
       <li><a class="btn bg-[#00A63E] text-[#FFFFFF] rounded-full p-5 mr-7 border-none"><span>1</span>Copy</a></li>
@@ -42,12 +42,12 @@
 <main class="bg-[#dfefff] pt-11 px-10 pb-13 flex flex-col lg:flex-row gap-4">
     <!-- left side : Card Section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
-        <div class="card bg-base-100 shadow-sm flex flex-col">
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="জাতীয় জরুরি সেবা" data-service-number="999">
         <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
             <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
             <img  src="./assets/emergency.png" alt=""> 
             </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
         </div>
         
        <div class="card-body pt-0 gap-0">
@@ -64,20 +64,200 @@
             <i class="fa-solid fa-copy"></i>
             Copy
             </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
             <i class="fa-solid fa-phone"></i>
             Call
             </div>
        </div>
   </div>
 
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="পুলিশ" data-service-number="999">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/police.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           পুলিশ
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">999</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="ফায়ার সার্ভিস" data-service-number="999">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/fire-service.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           ফায়ার সার্ভিস
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">999</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="অ্যাম্বুলেন্স" data-service-number="1994-999999">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/ambulance.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           অ্যাম্বুলেন্স
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">1994-999999</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="নারী ও শিশু সহায়তা" data-service-number="109">
         <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
             <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
             <img  src="./assets/emergency.png" alt=""> 
             </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           নারী ও শিশু সহায়তা
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">109</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="দুদক" data-service-number="106">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/emergency.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           দুদক
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">106</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="বিদ্যুৎ বিভ্রাট" data-service-number="16216">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/emergency.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
+        </div>
+        
+       <div class="card-body pt-0 gap-0">
+          <h2 class="card-title text-[#111111] font-bold">
+           বিদ্যুৎ বিভ্রাট
+         </h2>
+         <p class="mb-3">National Emergency</p>
+         <h2 class="text-xl text-[#111111] font-bold">999</h2>
+         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
+            সার্বজনীন
+        </div>
+        <div class="card-actions flex gap-2">
+            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+            </div>
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
+            <i class="fa-solid fa-phone"></i>
+            Call
+            </div>
+       </div>
+  </div>
+
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="ব্র্যাক" data-service-number="16445">
+        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
+            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
+            <img  src="./assets/brac.png" alt=""> 
+            </figure>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
         </div>
         
        <div class="card-body pt-0 gap-0">
@@ -94,28 +274,28 @@
             <i class="fa-solid fa-copy"></i>
             Copy
             </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
             <i class="fa-solid fa-phone"></i>
             Call
             </div>
        </div>
   </div>
 
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
+        </div>
+        <div class="card bg-base-100 shadow-sm flex flex-col" data-servive-name="বাংলাদেশ রেলওয়ে" data-service-number="163">
         <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
             <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
+            <img  src="./assets/Bangladesh-Railway.png" alt=""> 
             </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
+            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C] heart-btn cursor-pointer"></i>
         </div>
         
        <div class="card-body pt-0 gap-0">
           <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
+           বাংলাদেশ রেলওয়ে
          </h2>
          <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
+         <h2 class="text-xl text-[#111111] font-bold">163</h2>
          <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
             সার্বজনীন
         </div>
@@ -124,194 +304,14 @@
             <i class="fa-solid fa-copy"></i>
             Copy
             </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
+            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white call-btn cursor-pointer">
             <i class="fa-solid fa-phone"></i>
             Call
             </div>
        </div>
   </div>
 
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
         </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
-        </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
-        </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
-        </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
-        </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
-    <div class="card bg-base-100 shadow-sm flex flex-col">
-        <div class="flex justify-between p-2 mx-6 mt-4 mb-0">
-            <figure class="w-12 h-12 bg-[#FFE3E2] rounded-xl p-3">
-            <img  src="./assets/emergency.png" alt=""> 
-            </figure>
-            <i class="fa-regular fa-heart mt-2 text-[#5C5C5C]"></i>
-        </div>
-        
-       <div class="card-body pt-0 gap-0">
-          <h2 class="card-title text-[#111111] font-bold">
-           জাতীয় জরুরি সেবা
-         </h2>
-         <p class="mb-3">National Emergency</p>
-         <h2 class="text-xl text-[#111111] font-bold">999</h2>
-         <div class="badge bg-[#F2F2F2]  text-[#5C5C5C] mb-4 rounded-2xl p-3">
-            সার্বজনীন
-        </div>
-        <div class="card-actions flex gap-2">
-            <div class="badge badge-outline flex-1 text-center border-[#D4D6D5] text-[#5C5C5C]">
-            <i class="fa-solid fa-copy"></i>
-            Copy
-            </div>
-            <div class="badge badge-outline flex-1 text-center bg-[#00A63E] border-none text-white">
-            <i class="fa-solid fa-phone"></i>
-            Call
-            </div>
-       </div>
-  </div>
-
-    </div>
 
     </div>
 
@@ -320,7 +320,11 @@
         <div class="flex justify-between items-center">
             <p class="text-[#111111]">
                 <i class="fa-regular fa-clock text-[#5C5C5C]"></i> Call History</p>
-            <button class="bg-[#00A63E] text-[#FFFFFF] rounded-full px-5 py-2 border-none">Clear</button>
+            <button id="clear-history-btn" class="bg-[#00A63E] text-[#FFFFFF] rounded-full px-5 py-2 border-none">Clear</button>
+        </div>
+
+        <div id="history-list" class="mt-3 space-y-2">
+
         </div>
         <div class="card bg-[#FAFAFA] card-xs shadow-sm flex flex-row gap-5 items-center px-3 py-2 mt-3">
            <div class="card-body flex flex-col">
@@ -335,6 +339,6 @@
 
 </main>
 
-    
+<script src="./script.js"></script>  
 </body>
 </html>
