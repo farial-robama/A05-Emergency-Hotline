@@ -1,24 +1,28 @@
 
-
+// initial counters
 let hearts = 0;
 let coins = 100;
 let copyCount = 0;
 historyData = [];
 
+// get element by ID
 function getElement(id) {
     return document.getElementById(id);
 }
 
+// set text content
 function setText(id,value) {
     getElement(id).textContent = value;
 }
 
+// update all counters
 function updateCounters() {
     setText("heart-count",hearts);
     setText("coin-count",coins);
     setText("copy-count",copyCount);
 }
 
+// add call record to history
 function addHistory(name,number){
     const data = {
         name : name,
@@ -29,6 +33,8 @@ function addHistory(name,number){
     renderHistory();
 }
 
+
+// render the call history on screen
 function renderHistory() {
     const historyList = getElement("history-list");
     historyList.innerHTML = "";
@@ -57,7 +63,7 @@ document.querySelectorAll(".heart-btn").forEach((btn) => {
 });
 
 // call-btn
-document.querySelectorAll(".heart-btn").forEach((btn) => {
+document.querySelectorAll(".call-btn").forEach((btn) => {
     btn.addEventListener("click",function() {
         const card = btn.parentElement.parentElement.parentElement;
         const name = card.dataset.serviceName;
