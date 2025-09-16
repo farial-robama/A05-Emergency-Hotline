@@ -1,5 +1,5 @@
 
-### 6. Answer to the following questions:
+### Answer to the following questions:
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
    
